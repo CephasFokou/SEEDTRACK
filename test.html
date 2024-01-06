@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulaire Todo List Dynamique avec Laravel</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <form id="todoForm">
+      <div id="todos">
+        <div class="form-group">
+          <input type="text" class="form-control mb-2" name="tasks[]" placeholder="Tâche 1">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control mb-2" name="tasks[]" placeholder="Tâche 2">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" id="ajouterFormulaire">Ajouter un nouveau formulaire</button>
+      <button type="submit" class="btn btn-success">Enregistrer</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var maxForms = 15; // Nombre maximum de formulaires
+
+      $('#ajouterFormulaire').click(function() {
+        var formCount = $('#todos').find('.form-group').length;
+
+        if (formCount < maxForms) {
+          var newForm = '<div class="form-group">';
+          newForm += '<input type="text" class="form-control mb-2" name="tasks[]" placeholder="Tâche ' + (formCount + 1) + '">';
+          newForm += '</div>';
+
+          $('#todos').append(newForm);
+        } else {
+          alert("Vous avez atteint le nombre maximal de formulaires !");
+        }
+      });
+
+      $('#todoForm').submit(function(e) {
+        e.preventDefault();
+        var formData = $(this).serialize();
+
+        $.ajax({
+          url: '/enregistrer-todos', // Endpoint Laravel pour l'enregistrement
+          method: 'POST',
+          data: formData,
+          success: function(response) {
+            console.log(response); // Traitement réussi côté serveur
+            // Vous pouvez ajouter ici une logique pour gérer la réponse du serveur
+          },
+          error: function(error) {
+            console.log(error); // Gestion des erreurs
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

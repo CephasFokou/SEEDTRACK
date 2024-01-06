@@ -1,0 +1,36 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - website_front
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Generate Docker Image Tag
+      id: docker_tag
+      run: echo "::set-output name=tag::$(date +'%Y%m%d%H%M%S')-${GITHUB_SHA::8}"
+
+    - name: Build and push Docker image
+      run: |
+        docker build -t karlmabs/seed-track-web:${{ steps.docker_tag.outputs.tag }} .
+        docker login -u karlmabs -p Barcelone1!
+        docker push karlmabs/seed-track-web:${{ steps.docker_tag.outputs.tag }}
+
+    - name: Deploy to VPS
+      uses: appleboy/ssh-action@master
+      with:
+        host: 5.250.176.223
+        username: root
+        password: r5J4A5Ol
+        script: |
+          cd /root/SEEDTRACK_WEB
+          export IMAGE_TAG=${{ steps.docker_tag.outputs.tag }}
+          docker-compose down
+          docker-compose up -d --build

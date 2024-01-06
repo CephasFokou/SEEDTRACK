@@ -1,0 +1,303 @@
+.text-color-chart{
+    color : #5db075 !important;
+}
+.input-w-75{
+    width: 70% !important;
+    margin-left: 4em;
+}
+
+.input-w-80 {
+    width: 80% !important;
+    margin-left: 4em;
+}
+.field-icon {
+    float: right;
+    margin-right: 1em;
+    margin-top: -2em;
+    position: relative;
+    /* z-index: 0; */
+    cursor: pointer;
+    color : #5db075;
+}
+a.sidebar-link.collapsed {
+    line-height: 1;
+}
+
+.none{
+    display: none;
+}
+input,select{
+    box-shadow: none !important;
+    text-transform: uppercase;
+}
+.form-control{
+    height: 31px !important;
+    outline: none !important;
+    border: 1px solid #ccc;
+    text-transform: none!important;
+}
+.btn{
+    height: 42px !important;
+}
+.form-control:is(:focus,:active){
+    border: .5px solid #5db075 !important;
+    border-color: .5px solid #5db075 !important;
+}
+.display-grid{
+    margin: 0px 48px;
+    display: inline-grid;
+}
+.action_icon {
+    /* margin-left: 0; */
+    margin-top: 0;
+    /* position: absolute; */
+    /* top: 10px; */
+    z-index: 222;
+    color: #5db075;
+    cursor: pointer;
+    margin: 0 5px 0 0;
+}
+
+.map_icon {
+    /* right: 21px;
+    top: 11px; */
+}
+.edit_icon {
+    /* right: 40px;
+    top: 12px; */
+    color: cadetblue;
+}
+.view_icon {
+    /* right: 60px;
+    top: 12px; */
+    color: rgb(144, 144, 144, 1);
+}
+
+.delete_icon {
+    /* right: 5px;
+    top: 12px; */
+    color: rgb(233, 62, 62);
+}
+
+.sidebar .sidebar-dropdown [aria-expanded="true"]:before{
+    display: none;
+}
+
+a.sidebar-link {
+    line-height: 1;
+}
+.show a.collapsed.sidebar-link:after {
+    width: 80%;
+    border-bottom: 0.1px #ddd solid;
+    margin-left: -90px;
+    position: absolute;
+    bottom: 0px;
+    content: '';
+}
+
+#parcerelle a.collapsed.sidebar-link:after{
+    margin-left: -15px!important;
+}
+
+#lines a.collapsed.sidebar-link:after {
+    margin-left: -40px!important;
+}
+
+#trees a.collapsed.sidebar-link:after {
+    margin-left: -55px!important;
+}
+
+#fruits a.collapsed.sidebar-link:after {
+    margin-left: -20px!important;
+}
+#feuilles a.collapsed.sidebar-link:after {
+    margin-left: -55px!important;
+}
+
+.login-form-container {
+    background: #F5F5F5!important;
+    position: absolute;
+    top: 0;
+}
+
+.main.login {
+    background: unset!important;
+    background-image: url(../img/pngocean1.png)!important;
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background-position: right!important;
+}
+
+ul.sidebar-nav > li.sidebar-item {
+    margin: 10px 10px;
+    text-transform: uppercase;
+    border-bottom: #dddddd47 1px solid;
+}
+.select2-container {
+    z-index: 2000;
+}
+
+
+.dropdown-desc {
+    padding: 0;
+    margin: 0 -20px 0px 50px;
+}
+
+.dropdown-desc-text {
+    text-transform: capitalize;
+    margin: 2px 0;
+    line-height: 1;
+    text-wrap: nowrap;
+}
+.fl-maj {
+    text-transform:lowercase!important;
+}
+
+.fl-maj:first-letter {
+    text-transform: capitalize;
+}
+
+.alert-message.fl-maj{
+    padding: 2px 2px;
+}
+#map{
+    z-index : 222;
+}
+.content-details-fruit {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: right 0.3s ease;
+    border: 1px solid red;
+    z-index : 333;
+}
+.content-details-fruit.active {
+    right: 0; /* Affichage du contenu à droite */
+}
+.img-tree{
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+}
+.sort_icon {
+    right: 45px;
+}
+
+#loader:before{
+    content: '';
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4bbf7338;
+    height: 100%;
+    width:100% ;
+    z-index: 999999;
+}
+
+#loader {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.loader {
+    border: 8px solid #5db075;
+    border-radius: 50%;
+    border-top: 8px solid #ffffff46;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    z-index: 1000000;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+div#alertModal {
+    z-index: 10000;
+}
+
+.btn:hover {
+    background-color: #fdfdfd40!important;
+    border-color: #dee6ed!important;
+    color: #020202!important;
+    text-decoration: none!important;
+}
+/*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+         -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog{
+    left: 320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+            transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog{
+    left: 0;
+}
+    
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: -320px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+            transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+
+@media (max-width: 767.98px) {
+
+    body .main.login{
+     background-position:unset!important;
+     background-size:cover!important;
+    }
+   body .login-form-container{
+    background:#f5f5f5c4!important;
+    right:0
+   }
+
+   .login-drone-image {
+    width: 70px;
+}
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Bootstrap 5 Admin &amp; Dashboard Template">
+	<meta name="author" content="Bootlab">
+
+	<title>SEEDTRACK - Login</title>
+
+	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&amp;display=swap" rel="stylesheet"> -->
+
+
+	<!-- BEGIN SETTINGS -->
+	<!-- Remove this after purchasing -->
+	<link class="js-stylesheet" href="css/light.css" rel="stylesheet">
+	<link class="js-stylesheet" href="css/mmmr.css" rel="stylesheet">
+	<link class="js-stylesheet" href="css/loader.css" rel="stylesheet">
+	<!-- END SETTINGS -->
+</head>
+
+
+<body data-theme="light" data-layout="fluid" data-sidebar-position="left" data-sidebar-behavior="sticky" class="overflow-hidden">
+	<div class="main d-flex justify-content-center w-100 login">
+		<main class="login-container">
+			<div class="row">
+				<div class="align-items-center col-sm-12 col-xl-6 col-md-6 d-flex h-100 justify-content-center m-0 p-0 login-form-container">
+					<div class="d-table-cell align-middle col-sm-12 col-xl-6 col-md-6">
+<body data-theme="light" data-layout="fluid" data-sidebar-position="left" data-sidebar-behavior="sticky">
+	<div class="main d-flex justify-content-center w-100">
+		<div class="preloader-wrap">
+			<div class="spinner spinner-10">
+				<div class="ms-cube1 ms-cube"></div>
+				<div class="ms-cube2 ms-cube"></div>
+				<div class="ms-cube4 ms-cube"></div>
+				<div class="ms-cube3 ms-cube"></div>
+			</div>
+		</div>
+		<main class="content d-flex p-0">
+			<div class="container d-flex flex-column">
+				<div class="row h-100">
+					<div class="mx-auto d-table h-100">
+						<div class="d-table-cell align-middle">
+
+						<div class="text-center mt-4">
+							<a class="sidebar-brand lh-1" href="javascript:void(0)" style="font-size: 46px !important;">
+								<span class="align-middle me-3"><span>SEED</span><span
+										class="text-color-chart">TRACK</span></span>
+							</a>
+							<p class="lead lh-1">
+								Veuillez vous connectez pour continuer
+							</p>
+						</div>
+
+						<div class="card">
+							<div class="card-body">
+								<div class="m-sm-3">
+									<div class="row">
+										<div class="col">
+											<hr>
+										</div>
+										<div class="col-auto text-uppercase d-flex align-items-center">Or</div>
+										<div class="col">
+											<hr>
+										</div>
+									</div>
+									<form id="authLogin" onsubmit="authLogin(event,'authLogin')" method="post">
+										<div class="mb-3">
+											<label class="form-label">Type d'activité</label>
+											<select name="typeActivity" class="form-control" id="typeActivity">
+												<option value=" Base génétique"> Base génétique</option>
+												<option value="Champ sémencier">Champ sémencier</option>
+											</select>
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Username</label>
+											<input class="form-control form-control-lg fs-6" type="text" name="username"
+												placeholder="Username" />
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Password</label>
+											<input class="form-control form-control-lg fs-6" type="password" id="password"
+												name="password" placeholder="Password" />
+											<span toggle="#password-field2" onclick="return tooglePassword('password','created-password')" class="fas fa-fw fa-eye field-icon created-password cursor-pointer text-color-logo"></span>
+
+											<!-- <small>
+												<a href='pages-reset-password.html'>Forgot password?</a>
+											</small> -->
+										</div>
+										<div>
+											<div class="form-check align-items-center">
+												<input id="customControlInline" type="checkbox"
+													class="form-check-input" value="remember-me" name="remember-me"
+													checked>
+												<label class="form-check-label text-small"
+													for="customControlInline">Remember me</label>
+											</div>
+										</div>
+										<div class="alert alert-dismissible alert-success align-items-center mb-3 position-relative text-center text-lg-start text-sm"
+											role="alert" style="display:none;">
+											<button type="button" class="btn-close fs-sm p-1 pt-1 px-2 text-sm" data-bs-dismiss="alert"
+												aria-label="Close"></button>
+											<div class="alert-message px-2 text-info-emphasis fl-maj">
+											</div>
+										</div>
+										<div class="d-grid gap-2 mt-3">
+											<input type="submit" class='btn btn-lg btn-primary' value="Connexion">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 h-100 login-banner-contain m-0 p-0">
+					<img src="img/drone.png" alt="Login drone image" class="end-0 login-drone-image position-fixed top-50">
+				</div>
+
+			</div>
+		</main>
+	</div>
+
+	<script src="js/var.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/login.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(window).on("load", function() {
+				//alert(237)
+				$('.preloader-wrap').addClass('loaded');
+			});
+		});
+	</script>
+</body>
+
+</html>
